@@ -1,11 +1,11 @@
-#before_build:
-#- nuget restore
-#build:
-#  publish_wap: true
-#  verbosity: minimal
+before_build:
+- nuget restore
+build:
+  parallel: true
+  publish_wap: true
 
-build_script:
-  - ps: .\build.ps1
+#build_script:
+#  - ps: .\build.ps1
 
 #deploy:
 #- provider: GitHub
