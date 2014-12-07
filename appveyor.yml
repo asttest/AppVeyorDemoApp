@@ -1,15 +1,18 @@
 before_build:
 - nuget restore
-build:
-  publish_wap: true
-  verbosity: minimal
+#build:
+#  publish_wap: true
+#  verbosity: minimal
 
-deploy:
-- provider: GitHub
-  auth_token:
-    secure: h6dJjwQcSOskc41uQN0G2z8LY65rUdpXRwLypbW35+XfbCYJe0T9Nbn9QDnp/mP/
-  draft: true
-  prerelease: true
+build_script:
+  - ps: build.ps1
+
+#deploy:
+#- provider: GitHub
+#  auth_token:
+#    secure: h6dJjwQcSOskc41uQN0G2z8LY65rUdpXRwLypbW35+XfbCYJe0T9Nbn9QDnp/mP/
+#  draft: true
+#  prerelease: true
 
 notifications:
 - provider: Email
