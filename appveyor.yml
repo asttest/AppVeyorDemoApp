@@ -2,8 +2,10 @@ before_build:
 - nuget restore
 build:
   parallel: true
+  verbosity: minimal
   publish_wap: true
 
+test: off
 #build_script:
 #  - ps: .\build.ps1
 
