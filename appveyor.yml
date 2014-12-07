@@ -3,6 +3,14 @@ before_build:
 build:
   publish_wap: true
   verbosity: minimal
+
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: h6dJjwQcSOskc41uQN0G2z8LY65rUdpXRwLypbW35+XfbCYJe0T9Nbn9QDnp/mP/
+  draft: true
+  prerelease: true
+
 notifications:
 - provider: Email
   to:
