@@ -2,26 +2,10 @@ configuration: release
 
 before_build:
 - nuget restore
+
 build:
   parallel: true
   verbosity: minimal
   publish_wap: true
 
 test: off
-#build_script:
-#  - ps: .\build.ps1
-
-#deploy:
-#- provider: GitHub
-#  auth_token:
-#    secure: h6dJjwQcSOskc41uQN0G2z8LY65rUdpXRwLypbW35+XfbCYJe0T9Nbn9QDnp/mP/
-#  draft: true
-#  prerelease: true
-
-notifications:
-- provider: Email
-  to:
-  - team@appveyor.com
-  subject: 'Another notification - Build {{status}}: {{projectName}} {{buildVersion}}'
-  on_build_success: true
-  on_build_failure: true
