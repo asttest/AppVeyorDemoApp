@@ -6,6 +6,6 @@ before_build:
 build:
   parallel: true
   verbosity: minimal
-  publish_wap_xcopy: true
+  publish_wap: true
 
 test: off
